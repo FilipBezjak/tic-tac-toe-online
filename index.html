@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+        <h1>Tic-Tac-Toe</h1>
+        <p class="subtitle">Play local or challenge the AI.</p>
+
+        <div class="controls">
+          <label for="mode">Mode</label>
+          <select id="mode">
+            <option value="human">2 Players</option>
+            <option value="ai">Vs AI</option>
+          </select>
+          <button id="reset">New Round</button>
+          <button id="clear-score">Clear Score</button>
+        </div>
+
+        <div class="status" id="status">Player X's turn</div>
+
+        <div class="board" id="board" role="grid" aria-label="Tic tac toe board">
+          <button class="cell" data-index="0" aria-label="Cell 1"></button>
+          <button class="cell" data-index="1" aria-label="Cell 2"></button>
+          <button class="cell" data-index="2" aria-label="Cell 3"></button>
+          <button class="cell" data-index="3" aria-label="Cell 4"></button>
+          <button class="cell" data-index="4" aria-label="Cell 5"></button>
+          <button class="cell" data-index="5" aria-label="Cell 6"></button>
+          <button class="cell" data-index="6" aria-label="Cell 7"></button>
+          <button class="cell" data-index="7" aria-label="Cell 8"></button>
+          <button class="cell" data-index="8" aria-label="Cell 9"></button>
+        </div>
+
+        <div class="scoreboard">
+          <div><span>X</span><strong id="score-x">0</strong></div>
+          <div><span>O</span><strong id="score-o">0</strong></div>
+          <div><span>Draws</span><strong id="score-draw">0</strong></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
